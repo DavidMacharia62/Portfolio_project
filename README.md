@@ -80,9 +80,8 @@ Transaction Cost: 0.00
 
 ## Contributors
 
-- [Your Name](https://github.com/your_username)
-- [Contributor 1](https://github.com/contributor1)
-- [Contributor 2](https://github.com/contributor2)
+- [David Macharia Waweru]
+- [Contributor 1](https://github.com/DavidMacharia62)
 
 ## License
 
