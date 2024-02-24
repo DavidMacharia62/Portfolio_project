@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from parse_mpesa_messages import parse_message  # Import the parse_message function
 
 app = Flask(__name__)
 
@@ -8,10 +9,9 @@ def index():
 
 @app.route('/run_python_function', methods=['POST'])
 def run_python_function():
-    input_data = request.form['input_data']
-    # Call your Python function with input_data here
-    result = your_python_function(input_data)
-    return result
+    input_message = request.form['input_message']
+    parsed_data = parse_message(input_message)  # Call the parse_message function
+    return render_template('result.html', parsed_data=parsed_data)
 
 if __name__ == '__main__':
     app.run(debug=True)
