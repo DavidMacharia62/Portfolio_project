@@ -97,12 +97,12 @@ def determine_transaction_type(message):
 
 def insert_into_database(data):
     # Establish a connection to the database
-    conn = sqlite3.connect('your_database.db')
+    conn = sqlite3.connect('pesa_parse.db')
     cursor = conn.cursor()
 
     try:
         # Define the SQL statement
-        sql = "INSERT INTO your_table (transaction_code, transaction_type, amount, sender_name, sender_phone, receiver_name, receiver_phone, receiver_account, date, balance, transaction_cost) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        sql = "INSERT INTO parsed_pesa (transaction_code, transaction_type, amount, sender_name, sender_phone, receiver_name, receiver_phone, receiver_account, date, balance, transaction_cost) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
         # Execute the SQL statement with the extracted data
         cursor.execute(sql, (

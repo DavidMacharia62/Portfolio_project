@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from parse_mpesa_messages import parse_message  # Import the parse_message function
+from pesa_parse import parse_message  # Import the parse_message function
 
 app = Flask(__name__)
 
