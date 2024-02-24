@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-PESA Message Parser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>M-PESA Message Parser</h1>
+
+    <p>Welcome to the M-PESA Message Parser tool! This tool helps you parse M-PESA messages and extract important
+        information from them.</p>
+
+    <h2>Parse Single Message</h2>
+    <p>Enter an M-PESA message below and click the "Parse" button to extract information from it:</p>
+    <textarea id="singleMessage" rows="4" cols="50"></textarea><br>
+    <button onclick="parseSingleMessage()">Parse</button>
+
+    <div id="singleMessageResult"></div>
+
+    <h2>Parse Multiple Messages</h2>
+    <p>Upload a text file containing multiple M-PESA messages and click the "Parse" button to extract information from
+        each message:</p>
+    <input type="file" id="multiMessages" accept=".txt"><br>
+    <button onclick="parseMultipleMessages()">Parse</button>
+
+    <div id="multiMessagesResult"></div>
+
+    <script src="pesa_parse.js"></script>
+</body>
+
+</html>
+
